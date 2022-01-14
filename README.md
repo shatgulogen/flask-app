@@ -72,8 +72,9 @@ Or open `schema.sql` and take only the parts you want.
     - Add Why you should hire mom developers page
     - Possibily look for a job Board API for developers and intergrate it into the current website as time allows
 
-**2. Add style to the contents by adding style.css**
+**2. Update css style for each page**
 
 **3. Add Javascript main.js**
 
 **4. Things to improve**
+
