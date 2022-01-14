@@ -1,6 +1,6 @@
 html,
 body {
-    font-size: 16px;
+    font-size: 12px;
 }
 
 * {
@@ -68,7 +68,7 @@ form .error {
 }
 
 .profile-item img {
-    width: 350px;
+    width: 250px;
     height: auto;
     object-fit: cover;
     border: 0.5em solid white;
@@ -94,4 +94,6 @@ header nav {
 footer {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    font-size: 12px;
 }

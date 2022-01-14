@@ -12,7 +12,7 @@
             {% endif %}
         </div>
         <img src="{{profile['image_url']}}" alt="{{profile['skills']}}" />
-        <div class="location">${{profile["location"]}}</div>
+        <div class="location">{{profile["location"]}}</div>
         <div class="skills">{{profile['skills']}}</div>
     </div>
     {% endfor %}
