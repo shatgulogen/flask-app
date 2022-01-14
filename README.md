@@ -7,45 +7,61 @@
 -   Javascript
 -   Python
 
-Planning
+Get this repo by forking it, and cloning your fork, or by cloning this repo directly or by downloading the zip somewhere to your coursework folder.
 
--Here's the planning
-![Screenshot](.png)
+## Setup
 
-**1. Create index.html for main contents:**
+This project uses virtualenv and `requirements.txt`.
+
+Enter the repo:
+
+```
+cd flask-app
+```
+
+Create a venv:
+
+```
+python -m venv venv
+```
+
+Activate venv:
+
+```
+. venv/bin/activate
+```
+
+Install dependencies using `requirements.txt`
+
+```
+pip install -r requirements.txt
+```
+
+Create a Postgres database called `mom-devs-flex-jobs` (or any name, just then you will have to update the PG code in the app to work with your db name)
+
+```
+createdb profiles
+```
+
+Create schema and insert test data
+
+```
+psql mom-devs-flex-jobs < schema.sql
+```
+
+Or open `schema.sql` and take only the parts you want.
+
+## Planning
+
+**1. Create html files for contents:**
 
     - Include logo on top
     - Include a title on top : Mom Devs & Flex Jobs
     - Introduction: Connecting mom developers with the tech industry for flexible jobs. Hiring platform for mom talents for flexible developer positons.
-    - Include one button on the top-left with other hidden buttons leading to different routes: React.js Developers, C++ Developers, Android Developers, iOS Developers
-    - Include time limit box next to the start timer button.
-    - Include message updates for players.
-    - In 3 bottom colums:
-       1. Include score board for x and o.
-       2. Include main game board.
-       3. Include space for image.
+    - Include one button on the top-left with other hidden buttons leading to different routes: React.js Developers, C++ Developers, Android Developers, iOS Developers..
 
 **2. Add style to the contents by adding style.css**
 
-    - Use CSS grid to create class item-a to item-f to make the game webpage responsive.
-    - Place grid content into each class.
-
-**3. Make the logic to let the game become responsive by adding Javascript main.js**
-
-    - Add event listeners to all buttons on click.
-    - X starts or O starts first? Set up a button which will shuffle X and O when it is clicked and returns either X or O to determine who would start the game.
-    - If a X or O has already been clicked, the same box should not respond to or update when another click at the same position occurs.
-    - Set a final score and keep track of the scores for both players and update the winner in each single round of game or in the final round.
-    - The highest score should be 10. Whoever reaches the highest score first wins the game.
-    - Display a winning message when a player wins the single game each time and after the entire game.
-    - Display a draw message if nobody wins the game.
-    - Display a tie message when X and O reaches the same score of 5.
-    - Restart button will clear the game board but keep the scores for player X and O.
-    - Reset button will reload the game and also clear the score board.
-    - Timer buton will start the timer countdown.
-    - Include web audio and API sounds.
+**3. Add Javascript main.js**
 
 **4. Things to improve**
-
-    - Use media queries for the bottom colums to make it look nice when screen shrinks to certain size.
-    - Add eventlistener to shuffle button.

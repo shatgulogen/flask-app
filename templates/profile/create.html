@@ -1,0 +1,28 @@
+{% extends 'base.html' %} {% block content %}
+<form method="post" action="/profiles">
+    <h2>Create profile</h2>
+    <div>
+        <label for="name">Name</label>
+        <input id="name" name="name" type="text" />
+    </div>
+
+    <div>
+        <label for="location">Location</label>
+        <input id="location" name="location" type="text" />
+    </div>
+
+    <div>
+        <label for="skills">Skills</label>
+        <textarea id="skills" name="skills"></textarea>
+    </div>
+
+    <div>
+        <label for="image_url">Image Url</label>
+        <input id="image_url" name="image_url" />
+    </div>
+
+    <div>
+        <button type="submit">Save</button>
+    </div>
+</form>
+{% endblock content %}
