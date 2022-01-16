@@ -7,10 +7,8 @@ from controllers.session_controller import session_controller
 
 app = Flask(__name__)
 
-DB_URL = os.environ.get("DATABASE_URL", "dbname=flask_app")
-
-# Not for production, use an env variable for that
-app.config['SECRET_KEY'] = "secret"
+SECRET_KEY = os.environ.get("SECRET_KEY", "password")
+app.config['SECRET_KEY'] = SECRET_KEY
 
 
 @app.route('/')
