@@ -53,8 +53,9 @@ Or open `schema.sql` and take only the parts you want.
 
 ## Planning
 
--Here's the planning
+-Here's the planning for the front-end and back-end database design for this project
 ![Screenshot](www.momdevsflexjobs.com.png)
+![Screenshot](ERD_relationship.png)
 
 **1. Create html files for contents:**
 
