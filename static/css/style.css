@@ -16,7 +16,7 @@ body {
 .container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 4fr 3fr 7fr 3fr 7fr 3fr 3fr 7fr 7fr;
+    grid-template-rows: 1fr 4fr 4fr 2fr 4fr 2fr 4fr 2fr 2fr 4fr 4fr;
     grid-template-areas:
         'links links links links links links links links links links links links'
         'home home home home home home home home home home home home'
@@ -80,11 +80,7 @@ body {
     word-spacing: 6px;
     margin-top: 70px;
 }
-#img {
-    grid-column-start: span 12;
-    grid-row-start: 1;
-    grid-row-end: 7;
-}
+
 body {
     background-image: url('https://raw.githubusercontent.com/shatgulogen/picsformomdevsproject/main/background-2.png');
     background-repeat: no-repeat;
@@ -94,6 +90,12 @@ body {
     grid-column-start: span 2;
     grid-row-start: 1;
     grid-row-end: 1;
+}
+#flower {
+    grid-column-start: 3;
+    grid-row-start: 1;
+    grid-row-end: 1;
+    grid-column-end: 5;
 }
 #login {
     /* margin-top: -18px;
@@ -133,10 +135,10 @@ a:hover {
 }
 
 #home-content {
-    grid-column-start: 5;
-    grid-row-start: 3;
-    grid-row-end: 4;
-    grid-column-end: 8;
+    grid-column-start: 4;
+    grid-row-start: 2;
+    grid-row-end: 2;
+    grid-column-end: 9;
     font-size: 22px;
     color: white;
 }
@@ -203,15 +205,39 @@ span {
         transform: translate(-10px, -10px);
     }
 }
+#about {
+    grid-column-start: span 12;
+    grid-row-start: 3;
+    grid-row-end: 3;
+    color: white;
+}
+h2 {
+    color: rgb(229, 16, 236);
+}
+#about-bottom img {
+    height: 400px;
+    width: 80%;
+}
+#mission {
+    grid-column-start: span 12;
+    grid-row-start: 4;
+    grid-row-end: 4;
+}
+
+#profiles {
+    grid-column-start: span 12;
+    grid-row-start: 5;
+    grid-row-end: 5;
+}
 
 /* main,
 header,
 footer {
     width: 60em;
     margin: 2em auto;
-}
+} */
 
-a,
+/* a,
 button {
     border: 0;
     margin-block: 0.5em;
@@ -225,7 +251,7 @@ button {
     font-size: 1.4em;
 } */
 
-/* input,
+input,
 textarea {
     padding: 0.5em 1em;
 }
@@ -240,9 +266,9 @@ form > div {
     display: flex;
     flex-wrap: wrap;
     gap: 1em;
-} */
+}
 
-/* form label,
+form label,
 form input,
 form textarea {
     width: 100%;
@@ -257,8 +283,8 @@ form .error {
     border: 5px solid rgb(187, 76, 75);
     padding: 1em 2em;
     color: rgb(38, 28, 28);
-} */
-/* 
+}
+
 .profile-item {
     background-color: rgb(244, 244, 244);
     padding: 2em;
@@ -281,7 +307,7 @@ form .error {
     display: grid;
     gap: 2em;
     grid-template-columns: repeat(4, 1fr);
-} */
+}
 /* 
 header nav {
     display: flex;
