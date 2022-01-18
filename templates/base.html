@@ -19,45 +19,36 @@
         <link rel="icon" href="icon.png" />
     </head>
     <body>
-        <header>
-            <h1>Mom Devs & Flex Jobs</h1>
-            <nav class="navbar navbar-fixed-top">
-                <div class="container-fluid">
-                    <div class="site-nav-wrapper">
-
-                    <div class="navbar-header">
+        <div class="container">
                         <!-- Logo -->
-                        <a class="navbar-brand smooth-scroll" href="/">
+                        <a id=logo class=".item-buttons" href="/">
                             <img src="static/logo.jpg" alt="logo">
                         </a>
-                    </div>
 
-                <!-- Main Menu -->
-                <div class="container">
-                    <div class="collapse navbar-collapse">
-                        <ul class="nav navbar-nav pull-right">
-                            <li><a class="smooth-scroll" href="/">HOME</a></li>
+            <div id="links" class=".item-links">
+                <ul>
+                            <li><a href="/">HOME</a></li>
                             <li>
-                                <a class="smooth-scroll" href="/about">ABOUT</a>
+                                <a href="/about">ABOUT</a>
                             </li>
                             <li>
-                                <a class="smooth-scroll" href="/profiles"
+                                <a href="/profiles"
                                     >PROFILES</a
                                 >
                             </li>
                             <li>
-                                <a class="smooth-scroll" href="/apply">APPLY</a>
+                                <a href="/apply">APPLY</a>
                             </li>
                             <li>
-                                <a class="smooth-scroll" href="/blog">BLOG</a>
+                                <a href="/blog">BLOG</a>
                             </li>
                             <li>
-                                <a class="smooth-scroll" href="/resources"
+                                <a href="/resources"
                                     >RESOURCES</a
                                 >
                             </li>
                             <li>
-                                <a class="smooth-scroll" href="/contact"
+                                <a href="/contact"
                                     >CONTACT</a
                                 >
                             </li>
@@ -67,65 +58,62 @@
                                 <a href="/sessions/destroy">LOGOUT</a>
                             </div>
                             {% else %}
-                            <div>
+                            <div id=login>
                                 <li>
-                                    <a class="smooth-scroll" href="/login"
+                                    <a href="/login"
                                         >LOGIN</a
                                     >
                                 </li>
                             </div>
-                            <div>
+                            <div id=signup>
                                 <li>
-                                    <a class="smooth-scroll" href="/signup"
+                                    <a href="/signup"
                                         >SIGN UP</a
                                     >
                                 </li>
                             </div>
                             {% endif %}
                         </ul>
-                    </div>
-                </div>
-            </nav>
-        </header>
-
-        <!-- Background Video -->
-        <section id="home">
-            <video id="video" poster="/static/background-5.png" autoplay loop muted>
+            </div>
+            
+            <div id="home-content" class=".item-home">
+            <!-- <video id="video" poster="/static/background-5.png" autoplay loop muted>
             <source src="/static/video/purple.mp4" type="video/mp4">
-        </video>
-        
-
-        <!-- Home Content -->
-        <div id="home-content">
-
-            <div id="home-content-inner" class="text-center">
-
+            </video>  -->
                 <div id="home-heading">
-                    <h1 id="home-heading-1">MOM DEVELOPERS</h1><br>
-                    <h1 id="home-heading-2">FLEXIBLE <span>JOBS</span></h1>
+                    <h1 id="home-heading-1">MOM <span>DEVELOPERS</span></h1>
+                    <h1 id="home-heading-2">FLEXIBLE JOBS</h1>
                 </div>
 
                 <div id="home-text">
-                    <p>Connecting mom developers with the tech industry for flexible jobs. Hiring platform for mom talents for flexible software developer positons.</p>
+                    <p>Connecting mom talents with the tech industry for flexible developer roles.</p>
                 </div>
 
                 <div id="home-btn">
-                    <a class="btn btn-general btn-home smooth-scroll" href="/about" title="Start Now" role="button">Start Now</a>
+                    <a href="/about" title="Start Now" >Start Now</a>
                 </div>
-
+                <!-- Arrow Down -->
+               <a href="/about"><div class="arrow"></div></a>  
+            </div>
             </div>
 
-        </div>
 
+
+
+TO DO: Include the following into the above container, add content to each class and work on CSS and add javascript.
+            <div class=".item-about" id="about"></div>
+            <div class=".item-mission" id="mission"></div>
+            <div class=".item-profiles" id="profiles">
+                <main>{%block content %}{% endblock content %}</main>
+            </div>
+            <div class=".item-qoute" id="qoute"></div>
+            <div class=".item-blog" id="blog"></div>
+            <div class=".item-review" id="review"></div>
+            <div class=".item-resource" id="resource"></div>
+            <div class=".item-contact" id="contact"></div>
+            <div class=".item-map" id="map"></div>
         
-        <!-- Arrow Down -->
-        <a href="/about" id="arrow-down" class="smooth-scroll">
-            <i class="fa fa-angle-down"></i>
-        </a>
-        </section>
-
-        <main>{%block content %}{% endblock content %}</main>
-        <footer>
+                    <footer>
             <section>
                 <h4>Mom Devs & Flex Jobs</h4>
                 <p>&copy; 2022 Mom Devs & Flex Jobs, Inc.</p>
@@ -149,6 +137,10 @@
                 momdevs@flexjobs.local
             </section>
         </footer>
+
+        </div>
+        <header>
+
         <script src="/static/js/main.js"></script>
     </body>
 </html>
