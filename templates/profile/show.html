@@ -9,8 +9,11 @@
         {% endif %}
     </div>
     <img src="{{profile['image_url']}}" alt="{{profile['skills']}}" />
+    <div class="num_of_kids">{{profile['num_of_kids']}}</div>
     <div class="location">${{profile["location"]}}</div>
     <div class="skills">{{profile['skills']}}</div>
+    <div class="experience">{{profile['experience']}}</div>
+    <div class="availability">{{profile['availability']}}</div>
 
     {% endblock content %}
 </div>

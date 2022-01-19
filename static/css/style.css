@@ -5,7 +5,7 @@
 
 html,
 body {
-    font-size: 12px;
+    font-size: 11px;
     height: 100%;
 }
 
@@ -16,7 +16,7 @@ body {
 .container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 4fr 4fr 2fr 4fr 2fr 4fr 2fr 2fr 4fr 4fr;
+    grid-template-rows: 0.5fr 2fr 3fr 1.2fr 3fr 1fr 3fr 2fr 2fr 3fr 3fr;
     grid-template-areas:
         'links links links links links links links links links links links links'
         'home home home home home home home home home home home home'
@@ -86,16 +86,12 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
-#logo {
-    grid-column-start: span 2;
-    grid-row-start: 1;
-    grid-row-end: 1;
-}
 #flower {
-    grid-column-start: 3;
+    grid-column-start: 2;
     grid-row-start: 1;
     grid-row-end: 1;
-    grid-column-end: 5;
+    grid-column-end: 3;
+    margin-top: 50px;
 }
 #login {
     /* margin-top: -18px;
@@ -205,6 +201,10 @@ span {
         transform: translate(-10px, -10px);
     }
 }
+
+/* =========================================
+                About
+============================================ */
 #about {
     grid-column-start: span 12;
     grid-row-start: 3;
@@ -213,21 +213,145 @@ span {
 }
 h2 {
     color: rgb(229, 16, 236);
+    font-size: 30px;
+    text-transform: uppercase;
+    word-spacing: 9px;
+    display: inline-block;
+    position: relative;
+    top: 60px;
+    left: -400px;
+    margin: 0 0 0 35px;
+    font-weight: bold;
+}
+#about-right {
+    margin-top: 30px;
+    margin-left: 400px;
+    margin-right: 200px;
+    font-size: 16px;
+    text-align: left;
+    justify-items: left;
 }
 #about-bottom img {
-    height: 400px;
-    width: 80%;
+    height: auto;
+    width: 70%;
 }
+
+/* =========================================
+                Mission
+==============================================*/
+.item-mission {
+    background-color: rgb(244, 244, 244);
+    padding: 2em;
+}
+
+.about-item background-image {
+    width: 250px;
+    height: auto;
+    object-fit: cover;
+    border: 0.5em solid white;
+}
+
+.container1 {
+    display: grid;
+    gap: 2em;
+    grid-template-columns: repeat(3, 1fr);
+}
+
 #mission {
     grid-column-start: span 12;
     grid-row-start: 4;
     grid-row-end: 4;
+    background-color: #f4f4f4;
+}
+.about-item {
+    background-color: #fff;
+    padding: 80px 30px;
+    -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.about-item i {
+    font-size: 42px;
+    margin: 0;
+}
+
+.about-item h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.about-item hr {
+    width: 45px;
+    height: 3px;
+    background-color: rgb(229, 16, 236);
+    margin: 0 auto;
+    border: none;
+}
+
+.about-item p {
+    margin-top: 20px;
+}
+
+/* Hover state */
+
+.about-item:hover {
+    background-color: rgb(229, 16, 236);
+}
+
+.about-item:hover i,
+.about-item:hover h3,
+.about-item:hover p {
+    color: #fff;
+}
+
+.about-item:hover hr {
+    background-color: #fff;
+}
+
+.about-item:hover i {
+    transform: translateY(-20px);
+}
+
+/* Smooth transition */
+
+.about-item,
+.about-item i,
+.about-item hr {
+    -webkit-transition: all 400ms ease-in-out;
+    transition: all 400ms ease-in-out;
+}
+.about-item h3,
+.about-item p {
+    -webkit-transition: all 400ms linear;
+    transition: all 400ms linear;
 }
 
 #profiles {
     grid-column-start: span 12;
     grid-row-start: 5;
     grid-row-end: 5;
+}
+
+/* =========================================
+                Qoute
+============================================ */
+
+#qoute {
+    grid-column-start: span 12;
+    grid-row-start: 6;
+    grid-row-end: 6;
+}
+#tech-qoute h3 {
+    color: #fff;
+    font-size: 25px;
+    line-height: 45px;
+}
+
+#tech-qoute p {
+    font-size: 14px;
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    margin-top: 8px;
 }
 
 /* main,
@@ -284,6 +408,9 @@ form .error {
     padding: 1em 2em;
     color: rgb(38, 28, 28);
 }
+/* =========================================
+                profile
+============================================ */
 
 .profile-item {
     background-color: rgb(244, 244, 244);
