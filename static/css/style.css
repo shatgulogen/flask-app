@@ -3,6 +3,9 @@
     text-align: center;
 }
 
+html {
+    scroll-behavior: smooth;
+}
 html,
 body {
     font-size: 11px;
@@ -16,7 +19,7 @@ body {
 .container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 0.5fr 2fr 3fr 1.2fr 2fr 0.5fr 3fr 2fr 2fr 3fr 3fr;
+    grid-template-rows: 0.5fr 2.2fr 2.6fr 0.6fr 2.3fr 0.3fr 2.6fr 2fr 2fr 3fr 3fr;
     grid-template-areas:
         'links links links links links links links links links links links links'
         'home home home home home home home home home home home home'
@@ -79,12 +82,14 @@ body {
     align-content: center;
     word-spacing: 6px;
     margin-top: 70px;
+    font-weight: bold;
 }
 
 body {
     background-image: url('https://raw.githubusercontent.com/shatgulogen/picsformomdevsproject/main/background-2.png');
     background-repeat: no-repeat;
     background-attachment: fixed;
+    background-size: cover;
 }
 #flower {
     grid-column-start: 2;
@@ -150,11 +155,10 @@ span {
     border-radius: 28px;
     font-size: 13px;
     text-transform: uppercase;
-    margin: 0 6px;
-    padding: 10px 10px 10px 10px;
-    transition: all 0.5s;
+    /* margin: 0 6px; */
+    padding: 10px 1px 10px 1px;
     color: #fff;
-    border: 4px solid #fff;
+    border: 2px solid #fff;
     margin-top: 5%;
 }
 .arrow,
@@ -219,28 +223,28 @@ h2 {
     display: inline-block;
     position: relative;
     top: 60px;
-    left: -400px;
+    left: -500px;
     margin: 0 0 0 35px;
     font-weight: bold;
 }
-#about-right {
+#about-right p {
     margin-top: 30px;
-    margin-left: 400px;
-    margin-right: 200px;
-    font-size: 16px;
+    margin-left: 600px;
+    margin-right: 400px;
+    font-size: 22px;
     text-align: left;
     justify-items: left;
 }
 #about-bottom img {
     height: auto;
-    width: 70%;
+    width: 60%;
 }
 
 /* =========================================
                 Mission
 ==============================================*/
 .item-mission {
-    background-color: rgb(244, 244, 244);
+    background-color: rgb(32, 216, 244);
     padding: 2em;
 }
 
@@ -248,7 +252,7 @@ h2 {
     width: 250px;
     height: auto;
     object-fit: cover;
-    border: 0.5em solid white;
+    border: 0.5em solid rgb(32, 216, 244);
 }
 
 .container1 {
@@ -261,7 +265,7 @@ h2 {
     grid-column-start: span 12;
     grid-row-start: 4;
     grid-row-end: 4;
-    background-color: #f4f4f4;
+    background-color: rgb(170, 134, 244);
 }
 .about-item {
     background-color: #fff;
@@ -270,13 +274,8 @@ h2 {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.about-item i {
-    font-size: 42px;
-    margin: 0;
-}
-
 .about-item h3 {
-    font-size: 24px;
+    font-size: 30px;
     margin-bottom: 10px;
 }
 
@@ -290,6 +289,7 @@ h2 {
 
 .about-item p {
     margin-top: 20px;
+    font-size: 20px;
 }
 
 /* Hover state */
@@ -333,6 +333,71 @@ h2 {
 }
 
 /* =========================================
+                profile
+============================================ */
+#profile {
+    grid-column-start: span 12;
+    grid-row-start: 7;
+    grid-row-end: 7;
+}
+
+.listheading h1 {
+    font-size: 50px;
+    color: white;
+    text-align: left;
+    margin-left: 200px;
+}
+
+#add {
+    background-color: rgb(219, 8, 187);
+    text-align: center;
+    margin-top: -5px;
+    padding: 10px 60px 10px 60px;
+    font-size: 30px;
+    color: rgb(255, 255, 255);
+    border-radius: 50rem;
+}
+
+.profile-item {
+    background-color: rgb(225, 218, 218);
+    padding: 2em;
+
+    font-size: 2rem;
+    color: rgb(0, 0, 0);
+}
+.info a {
+    color: rgb(0, 0, 0);
+}
+
+.info h2 {
+    color: rgb(0, 0, 0);
+    margin-top: 10px;
+    font-size: 30px;
+    top: 0px;
+    left: 10px;
+}
+.profile-item img {
+    width: 250px;
+    height: auto;
+    object-fit: cover;
+    border: 0.5em solid rgb(255, 255, 255);
+}
+
+.profile-item .info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: rgb(0, 0, 0);
+}
+
+.all-profile {
+    display: grid;
+    gap: 2em;
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: 100px;
+}
+
+/* =========================================
                 Qoute
 ============================================ */
 
@@ -343,37 +408,16 @@ h2 {
 }
 #tech-qoute h3 {
     color: #fff;
-    font-size: 25px;
+    font-size: 30px;
     line-height: 45px;
 }
 
 #tech-qoute p {
-    font-size: 14px;
+    font-size: 20px;
     color: white;
     font-family: 'Raleway', sans-serif;
     margin-top: 8px;
 }
-
-/* main,
-header,
-footer {
-    width: 60em;
-    margin: 2em auto;
-} */
-
-/* a,
-button {
-    border: 0;
-    margin-block: 0.5em;
-    display: block;
-}
-
-button {
-    padding: 0.5em 1em;
-    cursor: pointer;
-    background-color: rgb(186, 233, 158);
-    font-size: 1.4em;
-} */
 
 input,
 textarea {
@@ -408,33 +452,6 @@ form .error {
     padding: 1em 2em;
     color: rgb(38, 28, 28);
 }
-/* =========================================
-                profile
-============================================ */
-
-.profile-item {
-    background-color: rgb(244, 244, 244);
-    padding: 2em;
-}
-
-.profile-item img {
-    width: 250px;
-    height: auto;
-    object-fit: cover;
-    border: 0.5em solid white;
-}
-
-.profile-item .info {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.all-profile {
-    display: grid;
-    gap: 2em;
-    grid-template-columns: repeat(4, 1fr);
-}
 /* 
 header nav {
     display: flex;
@@ -447,3 +464,59 @@ footer {
     gap: 20px;
     font-size: 12px;
 } */
+
+/* =========================================
+                Blog
+============================================ */
+
+#blog {
+    grid-column-start: span 12;
+    grid-row-start: 7;
+    grid-row-end: 7;
+}
+
+.item-blog h5 {
+    font-size: 30;
+}
+
+.blog-item-details {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.blog-item-details h3 {
+    color: rgb(229, 16, 236);
+    text-transform: uppercase;
+    font-size: 30px;
+    margin: 0;
+    padding: 0;
+    -webkit-transform: translateY(-20%);
+    transform: translateY(-20%);
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+.blog-item-details span {
+    display: inline-block;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    height: 6px;
+    width: 30px;
+    margin: 11px auto 5px auto;
+}
+
+.blog-item-details p {
+    font-size: 17px;
+    color: #fff;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 0;
+    -webkit-transform: translateY(20%);
+    transform: translateY(20%);
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+}

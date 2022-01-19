@@ -7,9 +7,19 @@
         <input id="name" name="name" type="text" value="{{profile['name']}}" />
     </div>
 
+     <div>
+        <label for="kids">Number of Kids</label>
+        <input id="kids" name="kids" type="text" />
+    </div>
+
     <div>
         <label for="location">Location</label>
         <input id="location" name="location" type="text" />
+    </div>
+
+      <div>
+        <label for="image_url">Image Url</label>
+        <input id="image_url" name="image_url" value="{{profile['image_url']}}"></textarea>
     </div>
     
     <div>
@@ -17,10 +27,21 @@
         <textarea id="skills" name="skills">{{profile['skills']}}</textarea>
     </div>
 
-    <div>
-        <label for="image_url">Image Url</label>
-        <input id="image_url" name="image_url" value="{{profile['image_url']}}"></textarea>
+     <div>
+        <label for="experience">Experience</label>
+        <input id="experience" name="experience" type="text" />
     </div>
+    <div>
+        <label for="availability">Work availability:</label>
+        <input id="availability" name="availability" type="text" />
+        <!-- <select name="availability" id="availability">
+            <option value="full-time">Full time</option>
+            <option value="part-time">Part time</option>
+            <option value="hourly">Hourly</option>
+            <option value="other">Other</option>
+        </select> -->
+    </div>
+
 
     <div>
         <button type="submit">Save</button>

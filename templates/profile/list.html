@@ -1,6 +1,11 @@
 {% extends 'base.html' %} {% block content %}
-<a href="/profiles/create">Add a profile</a>
 
+<div class="listheading">
+    <h1>Meet Talented</h1>
+    <h1>Mom Developers</h1>
+    <!-- <a href="/profiles/create">Add a profile</a> -->
+    <a href="/profiles/create"><button id="add">APPLY</button></a>
+</div>
 <section class="all-profile">
     {% for profile in profile_items %}
     <div class="profile-item">
@@ -8,12 +13,14 @@
             <h2>{{ profile['name'] }}</h2>
             <a href="/profiles/{{profile['id']}}">Show</a>
             {% if session.get('user_id') %}
-            <a href="/profiles/{{profile['id']}}/edit">Edit</a>
+            <a id="edit" href="/profiles/{{profile['id']}}/edit">Edit</a>
             {% endif %}
         </div>
         <img src="{{profile['image_url']}}" alt="{{profile['skills']}}" />
+        <div class="num_of_kids">Mom of {{profile['num_of_kids']}} kids</div>
         <div class="location">{{profile["location"]}}</div>
-        <div class="skills">{{profile['skills']}}</div>
+        <div class="experience">{{profile['experience']}} experience</div>
+        <div class="availability">{{profile['availability']}} availability</div>
     </div>
     {% endfor %}
 </section>
