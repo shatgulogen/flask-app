@@ -19,7 +19,7 @@ body {
 .container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 0.5fr 2.2fr 2.6fr 0.6fr 2.3fr 0.3fr 2.6fr 2fr 2fr 3fr 3fr;
+    grid-template-rows: 0.5fr 1.8fr 2.2fr 0.6fr 2.3fr 1fr 2.2fr 1.5fr 0.2fr 1.2fr 1fr;
     grid-template-areas:
         'links links links links links links links links links links links links'
         'home home home home home home home home home home home home'
@@ -99,8 +99,6 @@ body {
     margin-top: 50px;
 }
 #login {
-    /* margin-top: -18px;
-    margin-left: -750px; */
     text-decoration: none;
     background-color: rgb(226, 173, 231);
     padding: 14px 25px;
@@ -110,8 +108,6 @@ body {
 }
 
 #signup {
-    /* margin-top: -18px;
-    margin-left: -950px; */
     background-color: rgb(226, 173, 231);
     padding: 14px 25px;
     text-align: center;
@@ -129,7 +125,6 @@ a {
     text-decoration: none;
 }
 
-/* mouse over link */
 a:hover {
     color: rgb(229, 16, 236);
     text-decoration: none;
@@ -155,7 +150,6 @@ span {
     border-radius: 28px;
     font-size: 13px;
     text-transform: uppercase;
-    /* margin: 0 6px; */
     padding: 10px 1px 10px 1px;
     color: #fff;
     border: 2px solid #fff;
@@ -223,7 +217,7 @@ h2 {
     display: inline-block;
     position: relative;
     top: 60px;
-    left: -500px;
+    left: -380px;
     margin: 0 0 0 35px;
     font-weight: bold;
 }
@@ -237,7 +231,7 @@ h2 {
 }
 #about-bottom img {
     height: auto;
-    width: 60%;
+    width: 50%;
 }
 
 /* =========================================
@@ -292,8 +286,6 @@ h2 {
     font-size: 20px;
 }
 
-/* Hover state */
-
 .about-item:hover {
     background-color: rgb(229, 16, 236);
 }
@@ -312,33 +304,13 @@ h2 {
     transform: translateY(-20px);
 }
 
-/* Smooth transition */
-
-.about-item,
-.about-item i,
-.about-item hr {
-    -webkit-transition: all 400ms ease-in-out;
-    transition: all 400ms ease-in-out;
-}
-.about-item h3,
-.about-item p {
-    -webkit-transition: all 400ms linear;
-    transition: all 400ms linear;
-}
-
+/* =========================================
+                profiles
+============================================ */
 #profiles {
     grid-column-start: span 12;
     grid-row-start: 5;
     grid-row-end: 5;
-}
-
-/* =========================================
-                profile
-============================================ */
-#profile {
-    grid-column-start: span 12;
-    grid-row-start: 7;
-    grid-row-end: 7;
 }
 
 .listheading h1 {
@@ -359,9 +331,8 @@ h2 {
 }
 
 .profile-item {
-    background-color: rgb(225, 218, 218);
+    background-color: rgb(251, 248, 248);
     padding: 2em;
-
     font-size: 2rem;
     color: rgb(0, 0, 0);
 }
@@ -370,7 +341,7 @@ h2 {
 }
 
 .info h2 {
-    color: rgb(0, 0, 0);
+    color: rgb(133, 10, 186);
     margin-top: 10px;
     font-size: 30px;
     top: 0px;
@@ -452,18 +423,6 @@ form .error {
     padding: 1em 2em;
     color: rgb(38, 28, 28);
 }
-/* 
-header nav {
-    display: flex;
-    gap: 20px;
-}
-
-footer {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    font-size: 12px;
-} */
 
 /* =========================================
                 Blog
@@ -475,48 +434,216 @@ footer {
     grid-row-end: 7;
 }
 
-.item-blog h5 {
-    font-size: 30;
+#container3_all_blog {
+    grid-column-start: span 12;
+    display: grid;
+    gap: 3em;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
-.blog-item-details {
-    width: 100%;
-    position: absolute;
-    top: 50%;
-    left: 0;
-    -webkit-transform: translateY(-50%);
-    transform: translateY(-50%);
+#blogs h1 {
+    font-size: 40px;
+    color: white;
+}
+.blog-item {
+    padding: 3em;
+    padding-bottom: 18em;
+    background-color: white;
+}
+#blog-item-details {
+    display: flex;
+    align-items: center;
+    gap: 1px;
+    color: rgb(255, 255, 255);
 }
 
-.blog-item-details h3 {
-    color: rgb(229, 16, 236);
-    text-transform: uppercase;
-    font-size: 30px;
+.blog-item-details h4 {
+    color: rgb(128, 33, 229);
+    font-size: 20px;
     margin: 0;
-    padding: 0;
-    -webkit-transform: translateY(-20%);
-    transform: translateY(-20%);
-    -webkit-transition: all 0.5s;
-    transition: all 0.5s;
+    text-align: left;
 }
 
-.blog-item-details span {
-    display: inline-block;
-    border-top: 1px solid #fff;
-    border-bottom: 1px solid #fff;
-    height: 6px;
-    width: 30px;
-    margin: 11px auto 5px auto;
+.blog-item-details h5 {
+    color: rgb(128, 33, 229);
+    font-size: 15px;
+    align-items: flex-start;
+    justify-items: left;
+    text-align: left;
 }
 
 .blog-item-details p {
-    font-size: 17px;
-    color: #fff;
-    text-transform: uppercase;
+    font-size: 8px;
+    color: rgb(128, 33, 229);
+}
+
+.blog-item-details p1 {
+    font-size: 12px;
+    color: rgb(128, 33, 229);
+}
+
+.blog-item-details p2 {
+    font-size: 12px;
+    color: rgb(128, 33, 229);
+}
+
+/* =========================================
+                Review
+============================================ */
+
+.item-review {
+    padding: 2em;
+}
+#review {
+    grid-column-start: span 12;
+    grid-row-start: 8;
+    grid-row-end: 8;
+}
+
+.container4 {
+    display: grid;
+    gap: 2em;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+#review h1 {
+    font-size: 40px;
+    color: white;
+    margin-top: 200px;
+}
+
+.review-item {
+    color: rgb(135, 13, 241);
+    background-color: rgb(255, 255, 255);
+}
+
+.review h3 {
+    font-size: 32px;
+    line-height: 35px;
+}
+
+.review p {
+    line-height: normal;
     margin: 0;
-    padding: 0;
-    -webkit-transform: translateY(20%);
-    transform: translateY(20%);
-    -webkit-transition: all 0.5s;
-    transition: all 0.5s;
+    margin-top: 10px;
+    margin-bottom: 28px;
+}
+
+.author {
+    width: 106px;
+    margin-top: 25px;
+    text-align: left;
+    color: rgb(49, 96, 239);
+    margin-left: 50px;
+}
+
+/* =========================================
+                Resource
+============================================ */
+#resource {
+    grid-column-start: span 12;
+    grid-row-start: 9;
+    grid-row-end: 9;
+}
+
+.resource-item p {
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    font-weight: bold;
+}
+.resource-item a p {
+    color: rgb(255, 255, 255);
+    font-size: 30x;
+    text-decoration: none;
+    background-color: rgb(226, 173, 231);
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+/* =========================================
+                Contact
+============================================ */
+
+#contact {
+    grid-column-start: span 12;
+    grid-row-start: 10;
+    grid-row-end: 10;
+    background-color: rgb(169, 112, 231);
+}
+.container6 {
+    display: inline-grid;
+    gap: 1.5em;
+    grid-template-columns: repeat(2, 1fr);
+}
+.contact-item {
+    color: rgb(169, 112, 231);
+    background-color: rgb(255, 255, 255);
+}
+
+ul.office-details li {
+    font-family: 'Open Sans', sans-serif;
+    margin-top: 12px;
+    display: inline-block;
+}
+.contact-item h5 {
+    font-size: 40px;
+}
+ul {
+    font-size: 15px;
+    width: 15px;
+    color: rgb(169, 112, 231);
+}
+
+.contact-item ul.office-details li {
+    display: inline-block;
+    gap: 10px;
+}
+ul.social-list li a {
+    color: rgb(169, 112, 231);
+    border: 1px solid rgb(169, 112, 231);
+    text-align: center;
+}
+
+.contact-item ul.social-list li a:hover {
+    color: #fff;
+    border-color: transparent;
+}
+
+#contact-item {
+    padding: 25px 30px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+}
+
+.contact-item h4 {
+    font-size: 20px;
+}
+
+.contact-item {
+    margin-bottom: 25px;
+}
+
+.contact-item form .form-control {
+    font-family: 'Open Sans', sans-serif;
+    padding: 10px 15px;
+    font-size: 12px;
+    line-height: 24px;
+}
+
+#contact-right form textarea.form-control {
+    min-height: 400px;
+}
+
+/* =========================================
+                Map
+============================================ */
+
+#map {
+    grid-column-start: span 12;
+    grid-row-start: 11;
+    grid-row-end: 11;
+}
+footer {
+    font-size: 12px;
 }
