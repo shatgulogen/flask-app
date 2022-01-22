@@ -16,66 +16,7 @@ body {
     color: #9008a1;
 }
 
-.container {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 0.5fr 1.8fr 2.2fr 0.6fr 2.3fr 1fr 2.2fr 1.5fr 0.5fr 1fr 1fr;
-    grid-template-areas:
-        'links links links links links links links links links links links links'
-        'home home home home home home home home home home home home'
-        'about about about about about about about about about about about about'
-        'mission mission mission mission mission mission mission mission mission mission mission mission'
-        'profiles profiles profiles profiles profiles profiles profiles profiles profiles profiles profiles profiles'
-        'qoute qoute qoute qoute qoute qoute qoute qoute qoute qoute qoute qoute'
-        'blog blog blog blog blog blog blog blog blog blog blog blog'
-        'review review review review review review review review review review review review'
-        'resource resource resource resource resource resource resource resource resource resource resource resource'
-        'contact contact contact contact contact contact message message message message  message  message'
-        'map map map map map map map map map map map map';
-}
-
-.item-links {
-    grid-area: links;
-}
-.item-home {
-    grid-area: home;
-}
-.item-about {
-    grid-area: about;
-}
-.item-mission {
-    grid-area: mission;
-}
-.item-profiles {
-    grid-area: profiles;
-}
-.item-qoute {
-    grid-area: qoute;
-}
-.item-blog {
-    grid-area: blog;
-}
-.item-review {
-    grid-area: review;
-}
-.item-rescource {
-    grid-area: rescource;
-}
-.item-contact {
-    grid-area: contact;
-}
-.item-message {
-    grid-area: message;
-}
-.item-map {
-    grid-area: map;
-}
-
 #links {
-    grid-column-start: 4;
-    grid-row-start: 1;
-    grid-row-end: 1;
-    grid-column-end: 12;
     justify-content: center;
     align-items: center;
     justify-items: center;
@@ -92,11 +33,16 @@ body {
     background-size: cover;
 }
 #flower {
-    grid-column-start: 2;
-    grid-row-start: 1;
-    grid-row-end: 1;
-    grid-column-end: 3;
     margin-top: 50px;
+}
+.container {
+    max-width: 100vw;
+}
+
+header {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
 }
 #login {
     text-decoration: none;
@@ -131,12 +77,13 @@ a:hover {
 }
 
 #home-content {
-    grid-column-start: 4;
-    grid-row-start: 2;
-    grid-row-end: 2;
-    grid-column-end: 9;
+    height: 90vh;
     font-size: 22px;
     color: white;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    flex-direction: column;
 }
 span {
     color: rgb(229, 16, 236);
@@ -146,6 +93,7 @@ span {
 }
 
 #home-btn {
+    width: 20%;
     font-family: 'Raleway', sans-serif;
     border-radius: 28px;
     font-size: 13px;
@@ -172,7 +120,6 @@ span {
     border-right: 2px #fff solid;
     border-bottom: 2px #fff solid;
     margin-top: 300px;
-    margin-left: -100px;
 }
 
 .arrow:before {
@@ -204,9 +151,6 @@ span {
                 About
 ============================================ */
 #about {
-    grid-column-start: span 12;
-    grid-row-start: 3;
-    grid-row-end: 3;
     color: white;
 }
 h2 {
@@ -256,9 +200,6 @@ h2 {
 }
 
 #mission {
-    grid-column-start: span 12;
-    grid-row-start: 4;
-    grid-row-end: 4;
     background-color: rgb(170, 134, 244);
 }
 .about-item {
@@ -308,9 +249,6 @@ h2 {
                 profiles
 ============================================ */
 #profiles {
-    grid-column-start: span 12;
-    grid-row-start: 5;
-    grid-row-end: 5;
 }
 
 .listheading h1 {
@@ -373,9 +311,6 @@ h2 {
 ============================================ */
 
 #qoute {
-    grid-column-start: span 12;
-    grid-row-start: 6;
-    grid-row-end: 6;
 }
 #tech-qoute h3 {
     color: #fff;
@@ -427,11 +362,10 @@ form .error {
 /* =========================================
                 Blog
 ============================================ */
-
 #blog {
-    grid-column-start: span 12;
-    grid-row-start: 7;
-    grid-row-end: 7;
+    max-width: 100vw;
+    display: flex;
+    justify-content: center;
 }
 
 #container3_all_blog {
@@ -495,9 +429,6 @@ form .error {
     padding: 2em;
 }
 #review {
-    grid-column-start: span 12;
-    grid-row-start: 8;
-    grid-row-end: 8;
 }
 
 .container4 {
@@ -542,9 +473,6 @@ form .error {
                 Resource
 ============================================ */
 #resource {
-    grid-column-start: span 12;
-    grid-row-start: 9;
-    grid-row-end: 9;
 }
 
 .resource-item p {
@@ -571,9 +499,6 @@ form .error {
 ============================================ */
 
 #contact {
-    grid-column-start: span 12;
-    grid-row-start: 10;
-    grid-row-end: 10;
 }
 .container6 {
     display: inline-grid;
@@ -643,24 +568,18 @@ ul.social-list li a {
                 Map
 ============================================ */
 
-#map {
-    grid-column-start: span 12;
-    grid-row-start: 11;
-    grid-row-end: 11;
-}
-
 .mapouter {
     position: relative;
     text-align: right;
     height: 600px;
-    width: 1800px;
+    width: 100vw;
 }
 
 .gmap_canvas {
     overflow: hidden;
     background: none !important;
     height: 600px;
-    width: 1800px;
+    width: 100vw;
 }
 footer {
     font-size: 12px;

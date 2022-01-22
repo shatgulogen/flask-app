@@ -9,7 +9,7 @@ profile_controller = Blueprint(
 def profiles():
     profile_items = get_all_profile()
 
-    return render_template('list.html', profile_items=profile_items)
+    return render_template('home.html', profile_items=profile_items)
 
 
 @profile_controller.route('/profiles/create')

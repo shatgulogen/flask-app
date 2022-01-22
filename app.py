@@ -23,5 +23,6 @@ app.register_blueprint(session_controller)
 app.register_blueprint(user_controller)
 # TODO don't forget to register controllers
 
+
 if __name__ == '__main__':
     app.run(debug=True)
