@@ -57,7 +57,7 @@ def update(id):
     if not session.get('user_id'):
         return redirect('/login')
     name = request.form.get("name")
-    num_of_kids = request.form.get("num_of_kids")
+    num_of_kids = int(request.form.get("num_of_kids"))
     location = request.form.get("location")
     image_url = request.form.get("image_url")
     skills = request.form.get("skills")
