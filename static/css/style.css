@@ -19,7 +19,7 @@ body {
 .container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 0.5fr 1.8fr 2.2fr 0.6fr 2.3fr 1fr 2.2fr 1.5fr 0.2fr 1.2fr 1fr;
+    grid-template-rows: 0.5fr 1.8fr 2.2fr 0.6fr 2.3fr 1fr 2.2fr 1.5fr 0.5fr 1fr 1fr;
     grid-template-areas:
         'links links links links links links links links links links links links'
         'home home home home home home home home home home home home'
@@ -518,7 +518,7 @@ form .error {
 }
 
 .review h3 {
-    font-size: 32px;
+    font-size: 38px;
     line-height: 35px;
 }
 
@@ -527,6 +527,7 @@ form .error {
     margin: 0;
     margin-top: 10px;
     margin-bottom: 28px;
+    font-size: 18px;
 }
 
 .author {
@@ -548,18 +549,22 @@ form .error {
 
 .resource-item p {
     color: rgb(255, 255, 255);
-    font-size: 20px;
+    font-size: 25px;
     font-weight: bold;
 }
 .resource-item a p {
     color: rgb(255, 255, 255);
     font-size: 30x;
     text-decoration: none;
-    background-color: rgb(226, 173, 231);
+    background-color: rgb(169, 112, 231);
     padding: 14px 25px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
+}
+.resource-item a :hover {
+    color: violet;
+    background-color: white;
 }
 /* =========================================
                 Contact
@@ -569,7 +574,6 @@ form .error {
     grid-column-start: span 12;
     grid-row-start: 10;
     grid-row-end: 10;
-    background-color: rgb(169, 112, 231);
 }
 .container6 {
     display: inline-grid;
@@ -643,6 +647,20 @@ ul.social-list li a {
     grid-column-start: span 12;
     grid-row-start: 11;
     grid-row-end: 11;
+}
+
+.mapouter {
+    position: relative;
+    text-align: right;
+    height: 600px;
+    width: 1800px;
+}
+
+.gmap_canvas {
+    overflow: hidden;
+    background: none !important;
+    height: 600px;
+    width: 1800px;
 }
 footer {
     font-size: 12px;
